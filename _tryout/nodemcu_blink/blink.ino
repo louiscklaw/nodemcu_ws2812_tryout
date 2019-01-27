@@ -1,24 +1,71 @@
 /*
-  ESP8266 Blink by Simon Peter
-  Blink the blue LED on the ESP-01 module
-  This example code is in the public domain
+  Blink without Delay
 
-  The blue LED on the ESP-01 module is connected to GPIO1
-  (which is also the TXD pin; so we cannot use Serial.print() at the same time)
+  Turns on and off a light emitting diode (LED) connected to a digital pin,
+  without using the delay() function. This means that other code can run at the
+  same time without being interrupted by the LED code.
 
-  Note that this sketch uses LED_BUILTIN to find the pin with the internal LED
+  The circuit:
+  - Use the onboard LED.
+  - Note: Most Arduinos have an on-board LED you can control. On the UNO, MEGA
+    and ZERO it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN
+    is set to the correct LED pin independent of which board is used.
+    If you want to know what pin the on-board LED is connected to on your
+    Arduino model, check the Technical Specs of your board at:
+    https://www.arduino.cc/en/Main/Products
+
+  created 2005
+  by David A. Mellis
+  modified 8 Feb 2010
+  by Paul Stoffregen
+  modified 11 Nov 2013
+  by Scott Fitzgerald
+  modified 9 Jan 2017
+  by Arturo Guadalupi
+
+  This example code is in the public domain.
+
+  http://www.arduino.cc/en/Tutorial/BlinkWithoutDelay
 */
 
+// constants won't change. Used here to set a pin number:
+const int ledPin =  LED_BUILTIN;// the number of the LED pin
+
+// Variables will change:
+int ledState = LOW;             // ledState used to set the LED
+
+// Generally, you should use "unsigned long" for variables that hold time
+// The value will quickly become too large for an int to store
+unsigned long previousMillis = 0;        // will store last time LED was updated
+
+// constants won't change:
+const long interval = 100;           // interval at which to blink (milliseconds)
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);     // Initialize the LED_BUILTIN pin as an output
+  // set the digital pin as output:
+  pinMode(ledPin, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, LOW);   // Turn the LED on (Note that LOW is the voltage level
-  // but actually the LED is on; this is because
-  // it is active low on the ESP-01)
-  delay(1000);                      // Wait for a second
-  digitalWrite(LED_BUILTIN, HIGH);  // Turn the LED off by making the voltage HIGH
-  delay(2000);                      // Wait for two seconds (to demonstrate the active low LED)
+  // here is where you'd put code that needs to be running all the time.
+
+  // check to see if it's time to blink the LED; that is, if the difference
+  // between the current time and last time you blinked the LED is bigger than
+  // the interval at which you want to blink the LED.
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis >= interval) {
+    // save the last time you blinked the LED
+    previousMillis = currentMillis;
+
+    // if the LED is off turn it on and vice-versa:
+    if (ledState == LOW) {
+      ledState = HIGH;
+    } else {
+      ledState = LOW;
+    }
+
+    // set the LED with the ledState of the variable:
+    digitalWrite(ledPin, ledState);
+  }
 }
