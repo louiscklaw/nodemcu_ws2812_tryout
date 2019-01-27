@@ -1,8 +1,7 @@
-#
 #!/usr/bin/env python
 # init_py_dont_write_bytecode
 
-#init_boilerplate
+# https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc
 
 from fabric.api import *
 from fabric.colors import *
@@ -23,5 +22,5 @@ def get_cwd():
 
 def arduino_compile():
     with lcd(get_cwd()):
-        local('arduino --verify pwm_helloworld.ino')
-        local('arduino --upload pwm_helloworld.ino')
+        # local('arduino --verify pwm_helloworld.ino')
+        local('arduino --upload -v pwm_helloworld.ino ')
