@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/logic/.platformio/penv/bin:/home/logic/.platformio/penv:/home/logic/development/flutter/bin:/home/logic/.cargo/bin:/home/logic/.local/bin:/home/logic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}

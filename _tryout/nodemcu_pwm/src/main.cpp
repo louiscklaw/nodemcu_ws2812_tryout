@@ -1,4 +1,6 @@
 //
+
+#include <Arduino.h>
 uint8_t LEDpin = D6;
 
 /* By default PWM frequency is 1000Hz and we are using same

@@ -4,13 +4,17 @@
 			"path": "."
 		},
 		{
-			"path": "_tryout/platform-io-tryout/test-nodemcu",
-			"name": "test-nodemcu"
+			"path": "_tryout/nodemcu_blink/nodemcu_blink",
+			"name": "nodemcu_blink"
+		},
+		{
+			"path": "_tryout/nodemcu_SSD1306/nodemcu_SSD1306",
+			"name": "nodemcu_SSD1306"
 		}
 	],
 	"settings": {
 		"terminal.integrated.env.linux": {
-			"PATH": "/home/logic/.platformio/penv/bin:/home/logic/.platformio/penv:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/logic/_workspace/STM32Toolchain/gcc-arm-none-eabi-7-2018-q2-update/bin:/home/logic/_workspace/blueberrypi_workspace/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin",
+			"PATH": "/home/logic/.platformio/penv/bin:/home/logic/.platformio/penv:/home/logic/development/flutter/bin:/home/logic/.cargo/bin:/home/logic/.local/bin:/home/logic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
 			"PLATFORMIO_CALLER": "vscode"
 		}
 	}
