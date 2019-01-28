@@ -4,3 +4,6 @@
 [submodule "_ref/Adafruit_SSD1306"]
 	path = _ref/Adafruit_SSD1306
 	url = git@github.com:adafruit/Adafruit_SSD1306.git
+[submodule "_tryout/nodemcu_SSD1306/_ref/esp8266-oled-ssd1306"]
+	path = _tryout/nodemcu_SSD1306/_ref/esp8266-oled-ssd1306
+	url = git@github.com:ThingPulse/esp8266-oled-ssd1306.git
