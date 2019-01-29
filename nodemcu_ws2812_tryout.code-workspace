@@ -4,12 +4,8 @@
 			"path": "."
 		},
 		{
-			"path": "_tryout/nodemcu_blink/nodemcu_blink",
-			"name": "nodemcu_blink"
-		},
-		{
-			"path": "_tryout/nodemcu_SSD1306/nodemcu_SSD1306",
-			"name": "nodemcu_SSD1306"
+			"path": "_tryout/nodemcu_ws2812/nodemcu_ws2812",
+			"name": "nodemcu_ws2812"
 		}
 	],
 	"settings": {
