@@ -4,7 +4,7 @@
 #define LED_COUNT 8
 #define LED_PIN 5
 
-#define TIMER_MS 5000
+#define TIMER_MS 3000
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
@@ -21,8 +21,8 @@ unsigned long now = 0;
 
 void setup() {
   ws2812fx.init();
-  ws2812fx.setBrightness(255);
-  ws2812fx.setSpeed(1000);
+  ws2812fx.setBrightness(64);
+  ws2812fx.setSpeed(500);
   ws2812fx.setColor(0x007BFF);
   ws2812fx.setMode(FX_MODE_STATIC);
   ws2812fx.start();
